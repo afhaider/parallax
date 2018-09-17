@@ -1,0 +1,42 @@
+{% extends 'calender/base.html' %}
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <br>
+        <div class="col-lg-4">
+
+            <h2>Calender</h2>
+
+            {% if request.user.is_authenticated %}
+
+                <span> Hello,{{ request.user.username}}</span>
+                <a href="{% url 'logout' %}">Logout</a>
+
+            {% endif %}
+
+        </div>
+
+        <div class="col-lg-8">
+            <button type="button" class="btn btn-dark"
+                    onclick="window.location='{% url 'add' %}'">Add Entry</button>
+        </div>
+        <div class="col-lg-8">
+            <button type="button" class="btn btn-info"
+                    onclick="window.location='{% url 'blog-home' %}'">HOME</button>
+        </div>
+
+    </div>
+    <hr>
+    <div class="row">
+
+        {% for entry in entries %}
+
+            {% include 'calender/_calender_entry.html'  %}
+
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endblock %}
