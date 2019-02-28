@@ -1,0 +1,32 @@
+.switch {
+position: relative;
+display: block;
+text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+background-repeat: repeat-x;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+color: white;
+cursor: pointer;
+font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+font-size: 14px;
+font-weight: bold;
+line-height: 1;
+margin-bottom: 10px;
+outline: none;
+padding: 10px 20px 11px;
+text-align: center;
+text-decoration: none;
+width: 150px;
+border: 1px solid #8b0112;
+background-color: #ea3c51;
+background-image: -moz-linear-gradient(top, #ea3c51, #C72034);
+background-image: -ms-linear-gradient(top, #ea3c51, #C72034);
+background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ea3c51), to(#C72034));
+background-image: -webkit-linear-gradient(top, #ea3c51, #C72034);
+background-image: -o-linear-gradient(top, #ea3c51, #C72034);
+background-image: linear-gradient(top, #ea3c51, #C72034);
+}

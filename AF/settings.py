@@ -31,10 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'chatterbot.ext.django_chatterbot',
+    'weather',
     'calender',
     'Adminpanel',
     'blog',
     'users',
+    'search',
+    'music',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -42,7 +46,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "compressor",
+    'rest_framework',
+    'rest_auth',
+
 ]
+CHATTERBOT = {
+    'name': 'Django ChatterBot Example',
+    'django_app_name': 'django_chatterbot'
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,6 +136,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
+STATIC_ROOT = 'static'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
@@ -138,3 +157,10 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+
+STATICFILES_DIRS = (
+    os.path.join(
+        os.path.dirname(__file__),
+        'static',
+    ),
+)

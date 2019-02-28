@@ -1,0 +1,115 @@
+.navbar-brand {
+	font-family: 'Poiret One', cursive;
+	margin-right: 50px;
+}
+
+body {
+	background: black url("img/clouds.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.content-header h3 {
+	color: white;
+	font-family: 'Poiret One', cursive;
+}
+
+body h1, ul, li, a {
+	color: black;
+	text-decoration: none;
+}
+
+ul.errorlist {
+    padding-left: 0;
+}
+
+.glyphicon-star {
+    color: #CCCCCC;
+    font-size: 16px;
+}
+
+.glyphicon-star.active {
+    color: #FDB230;
+}
+
+.thumbnail.caption h2 {
+	color: white;
+}
+
+/* Login Page */
+
+
+
+.form-group > input {
+	background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 0 1em;
+  font-size: 1em;
+  height: 2.5em;
+	color: white;
+}
+
+#id_username {
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+  border: 1px solid white;
+  padding: 0 1em;
+  font-size: 1em;
+  height: 2.5em;
+	color: white;
+}
+#id_email {
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+  border: 1px solid white;
+  padding: 0 1em;
+  font-size: 1em;
+  height: 2.5em;
+	color: white;
+}
+#id_password {
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+  border: 1px solid white;
+  padding: 0 1em;
+  font-size: 1em;
+  height: 2.5em;
+	color: white;
+}
+#id_artist {
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+  border: 1px solid white;
+  padding: 0 1em;
+  font-size: 1em;
+  height: 2.5em;
+	color: white;
+}
+#id_album_title {
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+  border: 1px solid white;
+  padding: 0 1em;
+  font-size: 1em;
+  height: 2.5em;
+	color: white;
+}
+#id_genre {
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+  border: 1px solid white;
+  padding: 0 1em;
+  font-size: 1em;
+  height: 2.5em;
+	color: white;
+}
+#id_song_title {
+	background: rgba(0,0,0,0.5);
+	border-radius: 5px;
+  border: 1px solid white;
+  padding: 0 1em;
+  font-size: 1em;
+  height: 2.5em;
+	color: white;
+}

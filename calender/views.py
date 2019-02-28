@@ -14,12 +14,12 @@ def index(request):
 def calender(request):
     #return HttpResponse('it works hurray')
     entries=Entry.objects.all()
-    context = { 'entries' : entries}
+    context = { 'entries' : entries,'title': 'calender'}
     return render(request,'calender/calender.html',context)
 
 def details(request,pk):
     entry = Entry.objects.get(pk=pk)
-    context = {'entry': entry}
+    context = {'entry': entry,'title': 'calender-details'}
     return render(request, 'calender/details.html',context)
 
 def add(request):

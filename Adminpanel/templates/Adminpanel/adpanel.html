@@ -1,45 +1,24 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Important Announcements</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{%static   'Adminpanel/bootstrap.min.css'%}" rel="stylesheet"> 
-    <!-- Bootstrap theme -->
-    <link href="{%static 'Adminpanel/bootstrap-theme.min.css'%}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{%static 'Adminpanel/theme.css' %}" rel="stylesheet">
-
-  </head>
-
-  <body>
+{% extends "blog/base.html" %}
+{% block content %}
 
     <div class="container theme-showcase" role="main">
 
       <div class="jumbotron">
-        <h1>Important Announcements</h1>
+        <h1><b>Important Announcements</b></h1>
         <a type="button" class="btn btn-link" href="{% url 'blog-home' %}">BACK-HOME</a>
       </div>
 
       {% for c in comments %}
+      {% filter upper %}
       <div class="page-header">
-        <h1>{{c.name}}</h1>
+        <h1><i>{{c.name}}</i></h1>
       </div>
       <div class="well">
-        <p>{{c.comment}}</p>
+        <p><i>{{c.comment}}</i></p>
       </div>
+      {%endfilter%}
       {% endfor %}
     </div> <!-- /container -->
 
-  </body>
-</html>
+{%endblock content%}

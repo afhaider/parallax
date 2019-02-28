@@ -1,0 +1,710 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>NooBSblog</title>
+  <link rel='icon' href="{% static 'blog/img/bg-signup.jpg' %}" />
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'blog/vendor/fontawesome-free/css/all.min.css' %}v" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'blog/agency.css' %}" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body,
+    html {
+      height: 100%;
+      background: #283048;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #859398, #283048);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #859398, #283048);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      opacity: 10.1;
+      filter: alpha(opacity=30);
+    }
+
+    p {
+      line-height: 1.75;
+      color: black;
+    }
+
+    .parallax {
+      /* The image used */
+      background-image: url('{% static 'blog/img/bg-signup.jpg' %}');
+
+      /* Full height */
+      height: 25%;
+
+      /* Create the parallax scrolling effect */
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+</head>
+<div class="parallax"></div>
+
+<body id="page-top">
+  <section id="scrollDown">
+
+
+
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">NooBSblog</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#register">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div id="register" class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in" style="color: #FF416C;  /* fallback for old browsers */
+color: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+color: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">Welcome To Our Blog!</div>
+          <div class="intro-heading text-uppercase" style="color: #a8ff78;  /* fallback for old browsers */
+color: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+color: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">Your own Future</div>
+         
+        </div>
+      </div>
+    </header> <a class="btn btn-dark btn-xl text-uppercase js-scroll-trigger" href="{% url 'login' %}"><button
+      class="button" style="vertical-align:middle"><span>NoOb</span></button>L0GIN</a>
+  <a class="btn btn-dark btn-xl text-uppercase js-scroll-trigger" href="{% url 'register' %}"><button
+      class="button" style="vertical-align:middle"><span>Hell</span></button>SIGNUP</a>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase" style=" color:#ed213a;">Services</h2>
+            <h3 class="section-subheading ">NoobsBlog publishing technology
+              Noob is a powerful platform for creating an online blog or publication</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">E-Commerce</h4>
+            <p>NoobsBlog publishing technology
+              Noob is a powerful platform for creating an online blog or publication</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Responsive Design</h4>
+            <p>NoobsBlog publishing technology
+              Noob is a powerful platform for creating an online blog or publication</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Web Security</h4>
+            <p>NoobsBlog publishing technology
+              Noob is a powerful platform for creating an online blog or publication</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">About</h2>
+            <h3 class="section-subheading ">Noobsblog makes it easy for you to start your own blog.
+              Sign up for free to start sharing your ideas.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image" data-aos="fade-up" data-aos-anchor-placement="bottom-center">
+                  <img class="rounded-circle img-fluid" src="{% static 'blog/img/about/1.jpg' %}" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2009-2011</h4>
+                    <h4 class="subheading">Our Humble Beginnings</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Flexible content management
+
+                      Robust tagging functionality gives you fine-grained control over the categorisation of your
+                      content and a configuration layer called dynamic routing unlocks the power to structure your site
+                      content in almost any way you want.
+
+                      Build any type of category, section, format or flow to adapt to your needs - including custom
+                      homepages, URL structures and multi-language content.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image" data-aos="fade-up" data-aos-anchor-placement="bottom-center">
+                  <img class="rounded-circle img-fluid" src="{% static 'blog/img/about/2.jpg' %}" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>March 2011</h4>
+                    <h4 class="subheading">An Agency is Born</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Flexible content management
+
+                      Robust tagging functionality gives you fine-grained control over the categorisation of your
+                      content and a configuration layer called dynamic routing unlocks the power to structure your site
+                      content in almost any way you want.
+
+                      Build any type of category, section, format or flow to adapt to your needs - including custom
+                      homepages, URL structures and multi-language content.</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image" data-aos="fade-up" data-aos-anchor-placement="bottom-center">
+                  <img class="rounded-circle img-fluid" src="{% static 'blog/img/about/3.jpg' %}" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>December 2012</h4>
+                    <h4 class="subheading">Transition to Full Service</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Flexible content management
+
+                      Robust tagging functionality gives you fine-grained control over the categorisation of your
+                      content and a configuration layer called dynamic routing unlocks the power to structure your site
+                      content in almost any way you want.
+
+                      Build any type of category, section, format or flow to adapt to your needs - including custom
+                      homepages, URL structures and multi-language content.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image" data-aos="fade-up" data-aos-anchor-placement="bottom-center">
+                  <img class="rounded-circle img-fluid" src="{% static 'blog/img/about/4.jpg' %}" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>July 2014</h4>
+                    <h4 class="subheading">Phase Two Expansion</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>Flexible content management
+
+                      Robust tagging functionality gives you fine-grained control over the categorisation of your
+                      content and a configuration layer called dynamic routing unlocks the power to structure your site
+                      content in almost any way you want.
+
+                      Build any type of category, section, format or flow to adapt to your needs - including custom
+                      homepages, URL structures and multi-language content.</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <h4>Be Part
+                    <br>Of Our
+                    <br>Story!</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Team -->
+    <section class="bg-light" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+            <h3 class="section-subheading ">Work with your team
+              Multiples roles for authors, editors and administrators. Invite your whole team to collaborate, with
+              dedicated public user profiles for everyone.</h3>
+          </div>
+        </div>
+
+
+        <div class="row slideanim-'inline'">
+          {% for User in Users %}
+          <div class="col-sm-4 col-xs-12">
+
+
+            <div class="panel panel-default text-center">
+              <div class="panel-heading">
+
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="team-member">
+                      <img class="mx-auto rounded-circle" src="{{ User.profile.image.url }}" alt="">
+                      <h4>{{ User.username }}</h4>
+                      <p></p>
+                      <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                          <a href="#">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>{% endfor %}
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="large ">Powerful tooling New
+
+              Batteries included. A straightforward JSON importer and exporter keeps your data infinitely portable,
+              while our CLI tool makes configuring, running and updating Ghost a breeze.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/logos/envato.jpg' %}" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/logos/designmodo.jpg' %}" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/logos/themeforest.jpg' %}" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/logos/creative-market.jpg' %}" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; NOOB Website 2018</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro ">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/portfolio/01-full.jpg' %}" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
+                    expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Threads</li>
+                    <li>Category: Illustration</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro ">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/portfolio/02-full.jpg' %}" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
+                    expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Explore</li>
+                    <li>Category: Graphic Design</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro ">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/portfolio/03-full.jpg' %}" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
+                    expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Finish</li>
+                    <li>Category: Identity</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro ">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/portfolio/04-full.jpg' %}" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
+                    expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Lines</li>
+                    <li>Category: Branding</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Blog app coming soon</h2>
+                  <p class="item-intro ">Our Happiness Engineers work night and day through live chat, email, support
+                    pages, videos, and forums to answer any questions you have.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/portfolio/05-full.jpg' %}" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
+                    expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Southwest</li>
+                    <li>Category: Website Design</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro ">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="{% static 'blog/img/portfolio/06-full.jpg' %}" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia
+                    expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Window</li>
+                    <li>Category: Photography</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'blog/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="{% static 'blog/js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'blog/js/contact_me.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'blog/js/agency.min.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+          } else {
+            $('#back-to-top').fadeOut();
+          }
+        });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+          $('#back-to-top').tooltip('hide');
+          $('body,html').animate({
+            scrollTop: 0
+          }, 800);
+          return false;
+        });
+
+        $('#back-to-top').tooltip('show');
+
+      });
+      $(document).ready(function () {
+        $(".ct-btn-scroll").on('click', function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function () {
+              window.location.hash = hash;
+            });
+          }
+        });
+
+        setInterval(function () {
+          $('.ct-btn-scroll').toggleClass("bounce");
+        }, 5000);
+
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> </script>
+    <script> AOS.init(); </script>
+    </script>
+    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button"
+      title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span
+        class="glyphicon glyphicon-chevron-up"></span></a>
+
+
+    </div>
+    </div>
+    <section id="contact" class="image-hero">
+      <div class="image-center image-hero-content white">
+        <div class="container">
+          <h1 class="white">Big Data.<br />Realtime Insight.</h1>
+          <p class="white">Leverage your data and improve marketing and sales ROI. WebCorpCo is at the forefront of
+            digital marketing, content management, automated marketing, and more.</p>
+        </div>
+      </div>
+      <a class="ct-btn-scroll ct-js-btn-scroll animated" href="#scrollDown"></a>
+    </section>
+
+
+
+  </section>
+  <div data-aos="fade-up" class="parallax"></div>
+</body>
+
+</html>

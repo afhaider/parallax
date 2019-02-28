@@ -1,3 +1,4 @@
+{% load compress %}
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -6,35 +7,45 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    {% compress css %}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{% static 'blog/vendor/fontawesome-free/css/all.min.css' %}v" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
-
+    {% endcompress %}
     {% if title %}
         <title>Django Blog - {{ title }}</title>
     {% else %}
         <title>Django Blog</title>
     {% endif %}
 </head>
-<body>
+<body style=" background: #283048;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+"><section id="scrollDown">
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">NooBS Blog</a>
+          <a class="navbar-brand mr-4" href="{% url 'blog-alter' %}">NooBS Blog</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+              <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if user.is_authenticated %}
-              	<a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
+              	<a class="nav-item nav-link" href="{% url 'post-create' %}">Post</a>
+                <a class="nav-item nav-link" href="{% url 'onion' %}">Search</a>
+                 <a class="nav-item nav-link" href="{% url 'music:index' %}">Music</a>
                 <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
               {% else %}
@@ -60,24 +71,98 @@
         </div>
         <div class="col-md-4">
           <div class="content-section">
-            <h3><b>DragonarcAF</b></h3>
-            <p class='text-muted'>IIT Server(blogging supports)
+            <h3 class="text-danger"><b>DragonarcAF</b></h3>
+            <p class="p-3 mb-2 bg-warning text-dark"style="color:rgb(255, 255, 123)">IIT Server(blogging supports)
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Future Posts</li>
-                <li class="list-group-item list-group-item-light" ><a href="{% url 'Adminpanel-indexf' %}"style="color: #cc0000">Announcements</a></li>
-                <li class="list-group-item list-group-item-light"><a href="{% url 'calender' %}"style="color: #cc0000">Calendars</a></li>
-                <li class="list-group-item list-group-item-light">Wheather</li>
+                <li class="list-group-item list-group-item-light"><a href="{% url 'Adminpanel-viewsf' %}"style="color: rgb(0, 197, 255)">Future Posts</a></li>
+                <li class="list-group-item list-group-item-light" ><a href="{% url 'Adminpanel-indexf' %}"style="color: rgb(0, 197, 255)">Announcements</a></li>
+                <li class="list-group-item list-group-item-light"><a href="{% url 'calender' %}"style="color: rgb(0, 197, 255)">Calendars</a></li>
+                <li class="list-group-item list-group-item-light"><a href="{% url 'indexzz' %}"style="color: rgb(0, 197, 255)">Wheather</a></li>
+                 <li class="list-group-item list-group-item-light"><a href="{% url 'main' %}"style="color: rgba(255, 0, 0, 0.6)">CorpseAI</a></li>
+                  <li class="list-group-item list-group-item-light"><a href="{% url 'blog-parallax' %}"style="color: rgba(255,100, 0, 0.6)"><b>UnderConstruction</b></a></li>
+                  <li class="list-group-item list-group-item-light"><a href="{% url 'blog-test' %}"style="color: rgba(255,100, 0, 0.6)"><b>UnderConstruction</b></a></li>
               </ul>
             </p>
           </div>
         </div>
       </div>
     </main>
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'blog/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="{% static 'blog/js/jqBootstrapValidation.js' %}"></script>
+    <script src="{% static 'blog/js/contact_me.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'blog/js/agency.min.js' %}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+  $(".ct-btn-scroll").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+    
+  setInterval(function(){
+    $('.ct-btn-scroll').toggleClass("bounce");
+  }, 5000);    
+    
+});
+</script>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; Panda Website 2018</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
 </body>
 </html>

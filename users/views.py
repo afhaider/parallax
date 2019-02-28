@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm,Profile
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from .models import Profile
 
 
 def register(request):
@@ -17,30 +18,35 @@ def register(request):
     return render(request, 'users/register.html', {'form': form})
 
 
+@login_required
 def profile(request):
-    try:
-        profile = request.user.profile
-    except Profile.DoesNotExist:
-        profile = Profile(user=request.user)
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(
-            request.POST or None, instance=profile)
+        p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
+                                   instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
             u_form.save()
-            profile_form.save()
-            messages.success(
-                request, ('your profile was successfully updated!'))
+            p_form.save()
+            messages.success(request, f'Your account has been updated!')
             return redirect('profile')
-        else:
-            messages.error(
-                request, ('There was an error updating your profile'))
+
     else:
         u_form = UserUpdateForm(instance=request.user)
         p_form = ProfileUpdateForm(instance=request.user.profile)
-    context = {
+
+    context = {"Profile":Profile.objects.order_by(),
         'u_form': u_form,
         'p_form': p_form
     }
 
     return render(request, 'users/profile.html', context)
+    return render(request, 'blog/about.html',context)
+    return render(request, 'blog/alter.html',{"Profile":Profile.objects.order_by(),
+        'u_form': u_form,
+        'p_form': p_form
+    })
+    return render(request, 'blog/test.html',{"Profile":Profile.objects.order_by(),
+        'u_form': u_form,
+        'p_form': p_form
+    })

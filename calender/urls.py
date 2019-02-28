@@ -23,7 +23,7 @@ from . import views
 urlpatterns = [
 
     path('',views.index,name='index'),
-    path('calender',views.calender,name='calender'),
+    path('',views.calender,name='calender'),
     path('entry/<int:pk>',views.details,name='details'),
     path('entry/add',views.add,name='add'),
     path('entry/delete/<int:pk>',views.delete,name='delete'),
